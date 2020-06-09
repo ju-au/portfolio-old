@@ -24,6 +24,7 @@
   </title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="confirm-sent.css">
+  <script src="index.js"></script>
 </head>
 
 <body>
