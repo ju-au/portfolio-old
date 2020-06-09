@@ -13,8 +13,7 @@
   <meta name="theme-color" content="#ffffff"> -->
   <title>Junya's Portfolio Site</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="./photo/palm-tree-32-193040.png" jquery.min.js">
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript" src="index.js"></script>
   <script src="https://kit.fontawesome.com/967f098682.js" crossorigin="anonymous"></script>
 </head>

@@ -93,5 +93,6 @@ $(function () {
 // confirmページのリンククリック時の警告
 function confirmFunction() {
   //確認ダイアログを表示する
-  confirm( "Topページに移動します。ページを移動すると、ご入力いただいた内容は消えてしまいます。よろしいですか？" );
+  let conf = confirm( "Topページに移動します。ページを移動すると、ご入力いただいた内容は消えてしまいます。よろしいですか？" );
+  return conf;
   }

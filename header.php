@@ -37,12 +37,12 @@
         <div id="nav-content">
           <nav>
             <ul>
-              <li><a href="./index.php" onclick="confirmFunction()">Top</a></li>
-              <li><a href="./index.php#about" onclick="confirmFunction()">About</a></li>
-              <li><a href="./index.php#service" onclick="confirmFunction()">Service</a></li>
-              <li><a href="./index.php#works" onclick="confirmFunction()">Works</a></li>
-              <li><a href="./index.php#skills" onclick="confirmFunction()">Skills</a></li>
-              <li><a href="./index.php#contact" onclick="confirmFunction()">Contact</a></li>
+              <li><a href="./index.php" onclick="return confirmFunction()">Top</a></li>
+              <li><a href="./index.php#about" onclick="return confirmFunction()">About</a></li>
+              <li><a href="./index.php#service" onclick="return confirmFunction()">Service</a></li>
+              <li><a href="./index.php#works" onclick="return confirmFunction()">Works</a></li>
+              <li><a href="./index.php#skills" onclick="return confirmFunction()">Skills</a></li>
+              <li><a href="./index.php#contact" onclick="return confirmFunction()">Contact</a></li>
             </ul>
           </nav>
         </div>
