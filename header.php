@@ -1,10 +1,9 @@
 <header>
   <div id="headerContainer">
     <?php echo ($_SERVER["REQUEST_URI"]) ?>
-    <?php if ($_SERVER["REQUEST_URI"] == "/index.php") : ?>
+    <?php if ($_SERVER["REQUEST_URI"] === "/index.php") : ?>
 
-    <?php 
-      /* if ($_SERVER["REQUEST_URI"] == "/portfolio/index.php") : */ ?>
+    <?php /* if ($_SERVER["REQUEST_URI"] == "/portfolio/index.php") : */ ?>
 
       <h1>Junya's Portfolio Site</h1>
       <div id="nav-drawer">
