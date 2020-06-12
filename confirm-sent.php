@@ -4,19 +4,19 @@
 <head>
   <?php
   $clean = array();
-  $page_flag = 0; //確認画面
+  $page_flag = 1; //確認画面
 
   if (!empty($_POST['submit'])) {
-    $page_flag = 1; //送信完了画面
+    $page_flag = 2; //送信完了画面
   }
   ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     <?php
-    if ($page_flag == 0) {
+    if ($page_flag == 1) {
       echo "Confirm";
-    } else {
+    } elseif ($page_flag == 2) {
       echo "Message Sent";
     }
     ?>
@@ -32,7 +32,7 @@
   <?php include "header.php" ?>
 
   <!-- 確認画面 -->
-  <?php if ($page_flag === 0) : ?>
+  <?php if ($page_flag === 1) : ?>
     <?php
     if (!empty($_POST)) {
       foreach ($_POST as $key => $value) {
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-  <?php elseif ($page_flag === 1) : ?>
+  <?php elseif ($page_flag === 2) : ?>
 
     <?php
 

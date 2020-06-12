@@ -19,6 +19,7 @@
 </head>
 
 <body>
+  <?php $page_flag = 0 ?>
   <?php include "header.php" ?>
 
   <section id="top">
