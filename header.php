@@ -1,6 +1,7 @@
 <header>
   <div id="headerContainer">
     <h1>Junya's Portfolio Site</h1>
+    <!-- モバイル表示時のナビゲーションドロワー -->
     <div id="nav-drawer">
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label id="nav-open" for="nav-input">

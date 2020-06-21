@@ -76,9 +76,11 @@
     }
 
     $to = "ueda.the.tallest.pilot@gmail.com";
+    // $to = "info@junyaportfolio.com";
     $subject = " {$clean['name']}様よりお問い合わせがあります";
     $message = $clean['message'];
-    $header = "from: {$clean['email']}\n";
+    $header = "from: {$clean['email']}";
+    // $header = "from:info@junyaportfolio.com";
     $header .= "Reply-To: {$clean['email']}\n";
     $header .= "Return-Path: {$clean['email']}\n";
     $header .= "X-Mailer: PHP/" . phpversion();

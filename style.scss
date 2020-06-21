@@ -6,20 +6,25 @@
 @import "mixin.scss";
 
 //リセットCSSと、wrapper, containerクラスの共通CSS
+html {
+  width: 100vw;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
+  width: 100vw;
 }
 * {
   box-sizing: border-box;
+  outline: 2px solid red;
 }
 a {
   text-decoration: none;
   color: black;
 }
 .wrapper {
-  width: 100%;
+  width: 100vw;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 4px;
   z-index: 1;
@@ -136,7 +141,7 @@ header {
         }
         #nav-open {
           margin-top: -10px;
-          margin-right: 20px; 
+          margin-right: 20px;
           display: block;
           width: 30px;
           height: 22px;
@@ -187,7 +192,7 @@ header {
           max-width: 250px;
           height: 100vh;
           background: #fff;
-          opacity: .8;
+          opacity: 0.8;
           transition: 0.3s ease-in-out;
           transform: translateX(560px);
           ul {
@@ -232,7 +237,7 @@ header {
 }
 
 #bg-img {
-@include bg-img;
+  @include bg-img;
 }
 
 #top {
