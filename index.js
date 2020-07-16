@@ -45,6 +45,28 @@ function checkAndSend() {
   };
 }
 
+
+//スクロールアニメーション
+const targets = document.querySelectorAll('.scroll');
+const option = {
+  rootMargin: '-100px'
+};
+const observer = new IntersectionObserver(callback, option);
+targets.forEach(target => observer.observe(target));
+function callback(entries) {
+  console.log(entries);
+  entries.forEach(entry =>{
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
+    };
+  });
+};
+
+
+
+
+
+
 // jQuery
 $(function () {
 
@@ -60,21 +82,21 @@ $(function () {
 
 
 
-  //スクロールアニメーションの設定
-  let window_h = $(window).height();
-  //スクロールイベント
-  $(window).on("scroll", function () {
-    //スクロールの位置を取得する
-    let scroll_top = $(window).scrollTop();
-    $(".scroll").each(function () {
-      //各box要素のtopの位置を取得する
-      let elem_pos = $(this).offset().top;
-      //どのタイミングでフェードインさせるか
-      if (scroll_top >= elem_pos - window_h +100) {
-        $(this).addClass("show");　//特定の位置を超えたらクラスを追加
-      }
-    });
-  });
+  // //スクロールアニメーションの設定
+  // let window_h = $(window).height();
+  // //スクロールイベント
+  // $(window).on("scroll", function () {
+  //   //スクロールの位置を取得する
+  //   let scroll_top = $(window).scrollTop();
+  //   $(".scroll").each(function () {
+  //     //各box要素のtopの位置を取得する
+  //     let elem_pos = $(this).offset().top;
+  //     //どのタイミングでフェードインさせるか
+  //     if (scroll_top >= elem_pos - window_h +100) {
+  //       $(this).addClass("show");　//特定の位置を超えたらクラスを追加
+  //     }
+  //   });
+  // });
 
 
 

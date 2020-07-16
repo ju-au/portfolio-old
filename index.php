@@ -14,7 +14,6 @@
   <title>Junya's Portfolio Site</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="index.js"></script>
   <script src="https://kit.fontawesome.com/967f098682.js" crossorigin="anonymous"></script>
 </head>
 
@@ -219,6 +218,7 @@
     </div>
   </section>
 
+  <script type="text/javascript" src="index.js"></script>
 
 </body>
 
