@@ -1,49 +1,32 @@
-//Contact formに空欄があればメッセージを表示する
-let checkName = true;
-let checkEmail = true;
-let checkMessage = true;
-function checkAndSend() {
-  const form = document.query;
-  const ablankName = document.getElementById("blankName");
-  const ablankEmail = document.getElementById("blankEmail");
-  const ablankMessage = document.getElementById("blankMessage");
-  // フォームの「お名前」が空欄だった時にエラーメッセージを表示
-  if (form.queryName.value == "") {
-    ablankName.classList.add("showBlankMessage");
-    checkName = false;
-  } else {
-    if (ablankName.classList.contains("showBlankMessage")) {
-      ablankName.classList.remove("showBlankMessage");
-      checkName = true;
-    };
+// formの入力チェック
+const submit = document.getElementById('submit');
+submit.addEventListener('click', e => {
+  console.log(e);
+  const blankName = document.getElementById("blankName");
+  const blankEmail = document.getElementById("blankEmail");
+  const blankMessage = document.getElementById("blankMessage");
+  const formName = document.query.queryName.value;
+  const formEmail = document.query.queryEmail.value;
+  const formMessage = document.query.queryMessage.value;
+  //formのそれぞれの項目に対して、関数blankCheckを実行
+  let checkName = blankCheck(blankName, formName);
+  let checkEmail = blankCheck(blankEmail, formEmail);
+  let checkMessage = blankCheck(blankMessage, formMessage);
+  //formの全ての項目に入力されていなければ、ページ遷移を止める
+  if (!checkName || !checkEmail || !checkMessage) {
+  e.preventDefault();
   };
-  // フォームの「Email」が空欄だった時にエラーメッセージを表示
-  if (form.queryEmail.value == "") {
-    ablankEmail.classList.add("showBlankMessage");
-    checkEmail = false;
-  } else {
-    if (ablankEmail.classList.contains("showBlankMessage")) {
-      ablankEmail.classList.remove("showBlankMessage");
-      checkEmail = true;
-    };
-  };
-  // フォームの「お問い合わせ内容」が空欄だった時にエラーメッセージを表示
-  if (form.queryMessage.value == "") {
-    ablankMessage.classList.add("showBlankMessage");
-    checkMessage = false;
-  } else {
-    if (ablankMessage.classList.contains("showBlankMessage")) {
-      ablankMessage.classList.remove("showBlankMessage");
-      checkMessage = true;
-    };
-  };
-  //全ての項目に入力されていればtrueを返し、確認画面に遷移
-  if (checkName && checkEmail && checkMessage) {
-    return true;
-  } else {
+});
+//関数blankCheck
+function blankCheck(target, form) {
+  if (form == "") {
+    target.classList.add("showBlankMessage");
     return false;
   };
-}
+  target.classList.remove("showBlankMessage");
+  return true;
+};
+
 
 
 //スクロールアニメーション
@@ -54,9 +37,8 @@ const option = {
 const observer = new IntersectionObserver(callback, option);
 targets.forEach(target => observer.observe(target));
 function callback(entries) {
-  console.log(entries);
-  entries.forEach(entry =>{
-    if(entry.isIntersecting) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
       entry.target.classList.add('show');
     };
   });
@@ -115,6 +97,6 @@ $(function () {
 // confirmページのリンククリック時の警告
 function confirmFunction() {
   //確認ダイアログを表示する
-  let conf = confirm( "Topページに移動します。ページを移動すると、ご入力いただいた内容は消えてしまいます。よろしいですか？" );
+  let conf = confirm("Topページに移動します。ページを移動すると、ご入力いただいた内容は消えてしまいます。よろしいですか？");
   return conf;
-  }
+}

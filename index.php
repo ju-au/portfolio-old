@@ -183,7 +183,7 @@
     <div class="wrapper">
       <div class="container">
         <h2>Contact</h2>
-        <form action="confirm-sent.php" method="post" name="query" onsubmit="return checkAndSend()">
+        <form action="confirm-sent.php" method="post" name="query">
           <div id="form-contents">
             <p>お名前</p>
             <input type="text" name="queryName" id="queryName">
