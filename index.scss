@@ -1,0 +1,99 @@
+//@mixin 設定ファイル
+@import "mixin.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+#background-img {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -10;
+}
+h1 {
+    margin: 2em 0;
+    text-align: center;
+    @include sp {
+        margin: 0.5em 0;
+    }
+    .br-sp {
+        display: none;
+        @include sp {
+            display: inline;
+        }
+    }
+}
+section {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 16px 16px 0 0;
+    background-color: rgba($color: #ffffff, $alpha: 0.6);
+    width: 60%;
+    height: 75%;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include tab {
+        position: static;
+        transform: translateX(0%);
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+    }
+    @include sp {
+        width: 100%;
+    }
+    h2 {
+        margin: 2em 0 1.5em 0;
+        .br-tab {
+            display: none;
+            @include tab {
+                display: inline;
+            }
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        .item {
+            img {
+                border-radius: 16px;
+                width: 80%;
+            }
+            ul {
+                padding: 0;
+                li {
+                    list-style: none;
+                }
+            }
+        }
+        @include sp {
+            flex-direction: column;
+            h2 {
+                margin: 1.5em 0;
+            }
+            .item {
+                text-align: left;
+                margin: 0 8% 2em 8%;
+                padding-top: 2em;
+                    border-top: rgb(133, 133, 133) 2px solid;
+                a {
+                    margin: 0 10%;
+                }
+                ul {
+                    display: flex;
+                    justify-content: left;
+                    flex-wrap: wrap;
+                    padding-left: 4%;
+                    li {
+                        list-style: disc;
+                        margin-right: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

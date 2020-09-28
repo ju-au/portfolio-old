@@ -103,7 +103,7 @@
                     <h3>お手数ですが、以下のアドレスまでご連絡お願いいたします</h3>
                     <p><?php echo $to ?></p>
                   <?php endif; ?>
-                  <input type="button" value="Topに戻る" onclick="location.href='index.php'">
+                  <input type="button" value="Topに戻る" onclick="location.href='top.php'">
                   </div>
                 </div>
               </div>

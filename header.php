@@ -23,20 +23,20 @@
               <li><a href="#contact">Contact</a></li>
             <!-- 確認画面 -->
             <?php elseif ($page_flag === 1) : ?>
-              <li><a href="./index.php" onclick="return confirmFunction()">Top</a></li>
-              <li><a href="./index.php#about" onclick="return confirmFunction()">About</a></li>
-              <li><a href="./index.php#service" onclick="return confirmFunction()">Service</a></li>
-              <li><a href="./index.php#works" onclick="return confirmFunction()">Works</a></li>
-              <li><a href="./index.php#skills" onclick="return confirmFunction()">Skills</a></li>
-              <li><a href="./index.php#contact" onclick="return confirmFunction()">Contact</a></li>
+              <li><a href="./top.php" onclick="return confirmFunction()">Top</a></li>
+              <li><a href="./top.php#about" onclick="return confirmFunction()">About</a></li>
+              <li><a href="./top.php#service" onclick="return confirmFunction()">Service</a></li>
+              <li><a href="./top.php#works" onclick="return confirmFunction()">Works</a></li>
+              <li><a href="./top.php#skills" onclick="return confirmFunction()">Skills</a></li>
+              <li><a href="./top.php#contact" onclick="return confirmFunction()">Contact</a></li>
             <!-- 送信完了画面 -->
             <?php else : ?>
-              <li><a href="./index.php">Top</a></li>
-              <li><a href="./index.php#about">About</a></li>
-              <li><a href="./index.php#service">Service</a></li>
-              <li><a href="./index.php#works">Works</a></li>
-              <li><a href="./index.php#skills">Skills</a></li>
-              <li><a href="./index.php#contact">Contact</a></li>
+              <li><a href="./top.php">Top</a></li>
+              <li><a href="./top.php#about">About</a></li>
+              <li><a href="./top.php#service">Service</a></li>
+              <li><a href="./top.php#works">Works</a></li>
+              <li><a href="./top.php#skills">Skills</a></li>
+              <li><a href="./top.php#contact">Contact</a></li>
             <?php endif; ?>
           </ul>
         </nav>
